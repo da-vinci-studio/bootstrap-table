@@ -434,7 +434,7 @@
                 return sprintf('<input type="text" class="form-control bootstrap-table-filter-control-%s" style="width: 100%; visibility: %s" placeholder="%s">', field, isVisible, placeholder);
             },
             select: function (that, field, isVisible) {
-                return sprintf('<select class="form-control bootstrap-table-filter-control-%s" style="width: 100%; visibility: %s" dir="%s"></select>',
+                return sprintf('<select data-sonata-select2="false" class="form-control bootstrap-table-filter-control-%s" style="width: 100%; visibility: %s" dir="%s"></select>',
                     field, isVisible, getDirectionOfSelectOptions(that.options.alignmentSelectControlOptions));
             },
             datepicker: function (that, field, isVisible) {
