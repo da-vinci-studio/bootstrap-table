@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-    'use strict';
+    'useStrict';
     var sprintf = $.fn.bootstrapTable.utils.sprintf;
 
     var TYPE_NAME = {
@@ -112,13 +112,17 @@
                         }
                     }
 
+                    enableFormatString = false;
+
                     if (!!selectedData.length) {
                         that.load(selectedData);
                         doExport();
+                        enableFormatString = true;
                         that.load(data);
                     } else {
                         that.$el.one(that.options.sidePagination === 'server' ? 'post-body.bs.table' : 'page-change.bs.table', function () {
                             doExport();
+                            enableFormatString = true;
                             that.togglePagination();
                         });
 
