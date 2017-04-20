@@ -4,7 +4,6 @@
  */
 
 (function ($) {
-    'useStrict';
     var sprintf = $.fn.bootstrapTable.utils.sprintf;
 
     var TYPE_NAME = {
